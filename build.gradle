@@ -1,0 +1,78 @@
+//buildscript {
+//    dependencies {
+//        classpath 'gradle.plugin.com.github.jengelman.gradle.plugins:shadow:7.0.0'
+//    }
+//}
+
+plugins {
+    id 'maven-publish'
+    id 'java'
+}
+
+ext {
+    labframeworkVersion = '2021.0.0-SNAPSHOT'
+}
+
+// configure repositories for all projects
+allprojects {
+    group = 'com.im'
+    version = '2021.0.0-SNAPSHOT'
+
+    repositories {
+        maven {
+            url "https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/"
+            credentials {
+                username = "repo-1636594448870"
+                password = "14d93c3e05003664c54055340e737677d380d30e"
+            }
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central/'
+        }
+        mavenCentral()
+        mavenLocal()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
+
+subprojects {
+    apply {
+        plugin "maven-publish"
+    }
+    if (project.name.equals("lab-dependencies-gradle")) {
+        apply {
+            plugin 'java-platform'
+        }
+    } else {
+        apply {
+            plugin 'java-library'
+//            plugin 'com.github.johnrengelman.shadow'
+        }
+    }
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                groupId project.group
+                afterEvaluate {
+                    artifactId = project.name
+                    from project.name == "lab-dependencies-gradle" ? components.javaPlatform : components.java
+                }
+            }
+        }
+        repositories {
+            maven {
+                url "https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/"
+                credentials {
+                    username 'repo-1636594448870'
+                    password '14d93c3e05003664c54055340e737677d380d30e'
+                }
+            }
+        }
+    }
+}

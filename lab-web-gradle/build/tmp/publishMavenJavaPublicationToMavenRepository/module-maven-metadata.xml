@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.im</groupId>
+  <artifactId>lab-web-gradle</artifactId>
+  <versioning>
+    <latest>2021.0.0-SNAPSHOT</latest>
+    <versions>
+      <version>2021.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20211124083519</lastUpdated>
+  </versioning>
+</metadata>

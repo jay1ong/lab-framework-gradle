@@ -1,0 +1,17 @@
+sourceCompatibility = '1.8'
+
+ext {
+    labframeworkVersion = '2021.0.0-SNAPSHOT'
+}
+
+dependencies {
+    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    implementation("com.im:lab-core-gradle:$labframeworkVersion")
+    annotationProcessor("com.im:lab-core-gradle:$labframeworkVersion")
+    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("io.springfox:springfox-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-undertow")
+}
+

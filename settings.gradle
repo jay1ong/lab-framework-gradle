@@ -1,0 +1,21 @@
+//pluginManagement {
+//    repositories {
+//        maven {
+//            url 'https://maven.aliyun.com/repository/gradle-plugin'
+//        }
+//        gradlePluginPortal()
+//    }
+//}
+
+rootProject.name = 'lab-framework-gradle'
+
+include 'lab-axon-gradle'
+include 'lab-core-gradle'
+include 'lab-dependencies-gradle'
+include 'lab-data-gradle:lab-data-jpa-gradle'
+findProject(':lab-data-gradle:lab-data-jpa-gradle')?.name = 'lab-data-jpa-gradle'
+include 'lab-mq-gradle'
+include 'lab-snowflake-gradle'
+include 'lab-web-gradle'
+include 'lab-test-gradle'
+include 'lab-autoconfig-gradle'

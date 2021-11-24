@@ -1,0 +1,722 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.im",
+    "module": "lab-dependencies-gradle",
+    "version": "2021.0.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "platform",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-parent",
+          "version": {
+            "requires": "2.5.6"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-dependencies",
+          "version": {
+            "requires": "2020.0.4"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-dependencies",
+          "version": {
+            "requires": "2.5.6"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "com.im",
+          "module": "lab-autoconfig-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-axon-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-core-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-data-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-data-jpa-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-mq-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-web-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-snowflake-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "cn.hutool",
+          "module": "hutool-all",
+          "version": {
+            "requires": "5.7.16"
+          }
+        },
+        {
+          "group": "org.projectlombok",
+          "module": "lombok",
+          "version": {
+            "requires": "1.18.22"
+          }
+        },
+        {
+          "group": "com.alibaba",
+          "module": "fastjson",
+          "version": {
+            "requires": "1.2.78"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-test",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-autoconfigure",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-configuration-processor",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-bootstrap",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.apache.httpcomponents",
+          "module": "httpclient",
+          "version": {
+            "requires": "4.5.13"
+          }
+        },
+        {
+          "group": "com.tngtech.archunit",
+          "module": "archunit",
+          "version": {
+            "requires": "0.22.0"
+          }
+        },
+        {
+          "group": "org.mapstruct",
+          "module": "mapstruct",
+          "version": {
+            "requires": "1.4.2.Final"
+          }
+        },
+        {
+          "group": "org.mapstruct",
+          "module": "mapstruct-processor",
+          "version": {
+            "requires": "1.4.2.Final"
+          }
+        },
+        {
+          "group": "junit",
+          "module": "junit",
+          "version": {
+            "requires": "4.13.2"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.7.2"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-engine",
+          "version": {
+            "requires": "5.7.2"
+          }
+        },
+        {
+          "group": "com.querydsl",
+          "module": "querydsl-apt",
+          "version": {
+            "requires": "5.0.0"
+          }
+        },
+        {
+          "group": "com.querydsl",
+          "module": "querydsl-jpa",
+          "version": {
+            "requires": "5.0.0"
+          }
+        },
+        {
+          "group": "com.querydsl",
+          "module": "querydsl-sql-codegen",
+          "version": {
+            "requires": "5.0.0"
+          }
+        },
+        {
+          "group": "com.vladmihalcea",
+          "module": "hibernate-types-55",
+          "version": {
+            "requires": "2.14.0"
+          }
+        },
+        {
+          "group": "org.postgresql",
+          "module": "postgresql",
+          "version": {
+            "requires": "42.2.24"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-data-jpa",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "jakarta.persistence",
+          "module": "jakarta.persistence-api",
+          "version": {
+            "requires": "2.2.3"
+          }
+        },
+        {
+          "group": "javax.persistence",
+          "module": "javax.persistence-api",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "com.cosium.spring.data",
+          "module": "spring-data-jpa-entity-graph",
+          "version": {
+            "requires": "2.5.0"
+          }
+        },
+        {
+          "group": "com.alibaba.cloud",
+          "module": "spring-cloud-starter-alibaba-nacos-discovery",
+          "version": {
+            "requires": "2021.1"
+          }
+        },
+        {
+          "group": "com.alibaba.cloud",
+          "module": "spring-cloud-starter-alibaba-nacos-config",
+          "version": {
+            "requires": "2021.1"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "io.springfox",
+          "module": "springfox-boot-starter",
+          "version": {
+            "requires": "3.0.0"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-undertow",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.axonframework",
+          "module": "axon-spring-boot-starter",
+          "version": {
+            "requires": "4.5.4"
+          }
+        },
+        {
+          "group": "org.axonframework",
+          "module": "axon-test",
+          "version": {
+            "requires": "4.5.4"
+          }
+        },
+        {
+          "group": "org.springframework.kafka",
+          "module": "spring-kafka",
+          "version": {
+            "requires": "2.7.6"
+          }
+        },
+        {
+          "group": "com.sankuai.inf.leaf",
+          "module": "leaf-boot-starter",
+          "version": {
+            "requires": "1.0.1-RELEASE"
+          }
+        },
+        {
+          "group": "org.apache.curator",
+          "module": "curator-recipes",
+          "version": {
+            "requires": "2.6.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "platform",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-parent",
+          "version": {
+            "requires": "2.5.6"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-dependencies",
+          "version": {
+            "requires": "2020.0.4"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-dependencies",
+          "version": {
+            "requires": "2.5.6"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          },
+          "endorseStrictVersions": true
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "com.im",
+          "module": "lab-autoconfig-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-axon-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-core-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-data-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-data-jpa-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-mq-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-web-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.im",
+          "module": "lab-snowflake-gradle",
+          "version": {
+            "requires": "2021.0.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "cn.hutool",
+          "module": "hutool-all",
+          "version": {
+            "requires": "5.7.16"
+          }
+        },
+        {
+          "group": "org.projectlombok",
+          "module": "lombok",
+          "version": {
+            "requires": "1.18.22"
+          }
+        },
+        {
+          "group": "com.alibaba",
+          "module": "fastjson",
+          "version": {
+            "requires": "1.2.78"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-validation",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-test",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-autoconfigure",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-configuration-processor",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter-bootstrap",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.springframework.cloud",
+          "module": "spring-cloud-starter",
+          "version": {
+            "requires": "3.0.4"
+          }
+        },
+        {
+          "group": "org.apache.httpcomponents",
+          "module": "httpclient",
+          "version": {
+            "requires": "4.5.13"
+          }
+        },
+        {
+          "group": "com.tngtech.archunit",
+          "module": "archunit",
+          "version": {
+            "requires": "0.22.0"
+          }
+        },
+        {
+          "group": "org.mapstruct",
+          "module": "mapstruct",
+          "version": {
+            "requires": "1.4.2.Final"
+          }
+        },
+        {
+          "group": "org.mapstruct",
+          "module": "mapstruct-processor",
+          "version": {
+            "requires": "1.4.2.Final"
+          }
+        },
+        {
+          "group": "junit",
+          "module": "junit",
+          "version": {
+            "requires": "4.13.2"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.7.2"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-engine",
+          "version": {
+            "requires": "5.7.2"
+          }
+        },
+        {
+          "group": "com.querydsl",
+          "module": "querydsl-apt",
+          "version": {
+            "requires": "5.0.0"
+          }
+        },
+        {
+          "group": "com.querydsl",
+          "module": "querydsl-jpa",
+          "version": {
+            "requires": "5.0.0"
+          }
+        },
+        {
+          "group": "com.querydsl",
+          "module": "querydsl-sql-codegen",
+          "version": {
+            "requires": "5.0.0"
+          }
+        },
+        {
+          "group": "com.vladmihalcea",
+          "module": "hibernate-types-55",
+          "version": {
+            "requires": "2.14.0"
+          }
+        },
+        {
+          "group": "org.postgresql",
+          "module": "postgresql",
+          "version": {
+            "requires": "42.2.24"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-data-jpa",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "jakarta.persistence",
+          "module": "jakarta.persistence-api",
+          "version": {
+            "requires": "2.2.3"
+          }
+        },
+        {
+          "group": "javax.persistence",
+          "module": "javax.persistence-api",
+          "version": {
+            "requires": "2.2"
+          }
+        },
+        {
+          "group": "com.cosium.spring.data",
+          "module": "spring-data-jpa-entity-graph",
+          "version": {
+            "requires": "2.5.0"
+          }
+        },
+        {
+          "group": "com.alibaba.cloud",
+          "module": "spring-cloud-starter-alibaba-nacos-discovery",
+          "version": {
+            "requires": "2021.1"
+          }
+        },
+        {
+          "group": "com.alibaba.cloud",
+          "module": "spring-cloud-starter-alibaba-nacos-config",
+          "version": {
+            "requires": "2021.1"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-web",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "io.springfox",
+          "module": "springfox-boot-starter",
+          "version": {
+            "requires": "3.0.0"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter-undertow",
+          "version": {
+            "requires": "2.5.6"
+          }
+        },
+        {
+          "group": "org.axonframework",
+          "module": "axon-spring-boot-starter",
+          "version": {
+            "requires": "4.5.4"
+          }
+        },
+        {
+          "group": "org.axonframework",
+          "module": "axon-test",
+          "version": {
+            "requires": "4.5.4"
+          }
+        },
+        {
+          "group": "org.springframework.kafka",
+          "module": "spring-kafka",
+          "version": {
+            "requires": "2.7.6"
+          }
+        },
+        {
+          "group": "com.sankuai.inf.leaf",
+          "module": "leaf-boot-starter",
+          "version": {
+            "requires": "1.0.1-RELEASE"
+          }
+        },
+        {
+          "group": "org.apache.curator",
+          "module": "curator-recipes",
+          "version": {
+            "requires": "2.6.0"
+          }
+        }
+      ]
+    }
+  ]
+}
