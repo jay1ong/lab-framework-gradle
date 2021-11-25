@@ -5,5 +5,7 @@ ext {
 }
 
 dependencies {
-    implementation("com.im:lab-web-gradle:$labframeworkVersion")
+    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api("com.im:lab-web-gradle:$labframeworkVersion")
+    annotationProcessor("com.im:lab-web-gradle:$labframeworkVersion")
 }

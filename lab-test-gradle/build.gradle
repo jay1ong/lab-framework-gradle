@@ -1,0 +1,11 @@
+sourceCompatibility = '1.8'
+
+ext {
+    labframeworkVersion = '2021.0.0-SNAPSHOT'
+}
+
+dependencies {
+    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api("com.im:lab-autoconfig-gradle:$labframeworkVersion")
+    annotationProcessor("com.im:lab-autoconfig-gradle:$labframeworkVersion")
+}

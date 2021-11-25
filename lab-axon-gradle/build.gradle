@@ -10,6 +10,6 @@ ext {
 
 dependencies {
     implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    implementation("org.axonframework:axon-spring-boot-starter")
+    api("org.axonframework:axon-spring-boot-starter")
     testImplementation("org.axonframework:axon-test")
 }

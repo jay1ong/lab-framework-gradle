@@ -9,7 +9,7 @@ ext {
 }
 
 dependencies {
-    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     api("cn.hutool:hutool-all")
     api("org.projectlombok:lombok")
@@ -23,9 +23,6 @@ dependencies {
     api("org.springframework.cloud:spring-cloud-starter-bootstrap")
     api("org.springframework.cloud:spring-cloud-starter")
     api("org.apache.httpcomponents:httpclient")
-//    compileOnly("com.tngtech.archunit:archunit")
-//    compileOnly("org.mapstruct:mapstruct")
-//    compileOnly("org.mapstruct:mapstruct-processor")
     api("com.tngtech.archunit:archunit")
     api("org.mapstruct:mapstruct")
     api("org.mapstruct:mapstruct-processor")

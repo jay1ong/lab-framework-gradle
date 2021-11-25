@@ -6,12 +6,14 @@ ext {
 
 dependencies {
     implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    implementation("com.im:lab-core-gradle:$labframeworkVersion")
+    api("com.im:lab-core-gradle:$labframeworkVersion")
     annotationProcessor("com.im:lab-core-gradle:$labframeworkVersion")
-    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
-    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("io.springfox:springfox-boot-starter")
-    implementation("org.springframework.boot:spring-boot-starter-undertow")
+    api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
+    api("org.springframework.boot:spring-boot-starter-web") {
+        exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
+    }
+    api("io.springfox:springfox-boot-starter")
+    api("org.springframework.boot:spring-boot-starter-undertow")
 }
 

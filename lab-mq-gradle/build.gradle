@@ -1,0 +1,10 @@
+sourceCompatibility = '1.8'
+
+ext {
+    labframeworkVersion = '2021.0.0-SNAPSHOT'
+}
+
+dependencies {
+    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api("org.springframework.kafka:spring-kafka")
+}
