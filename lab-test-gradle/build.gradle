@@ -6,6 +6,7 @@ ext {
 
 dependencies {
     implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    api("com.im:lab-autoconfig-gradle:$labframeworkVersion")
-    annotationProcessor("com.im:lab-autoconfig-gradle:$labframeworkVersion")
+    annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api("com.im:lab-autoconfig-gradle")
+    annotationProcessor("com.im:lab-autoconfig-gradle")
 }
