@@ -18,11 +18,10 @@ allprojects {
 }
 
 subprojects {
-
     apply {
         plugin "maven-publish"
     }
-    if (project.name.equals("lab-dependencies-gradle")) {
+    if (project.name == "lab-dependencies-gradle") {
         apply {
             plugin 'java-platform'
         }

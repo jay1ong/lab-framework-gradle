@@ -6,6 +6,6 @@ ext {
 
 dependencies {
     implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    implementation("com.sankuai.inf.leaf:leaf-boot-starter")
-    implementation("org.apache.curator:curator-recipes")
+    api("com.sankuai.inf.leaf:leaf-boot-starter")
+    api("org.apache.curator:curator-recipes")
 }

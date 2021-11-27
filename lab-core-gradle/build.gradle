@@ -9,6 +9,9 @@ ext {
 }
 
 dependencies {
+    api(platform("org.springframework.boot:spring-boot-starter-parent"))
+    api(platform("org.springframework.cloud:spring-cloud-dependencies"))
+    api(platform("org.springframework.boot:spring-boot-dependencies"))
     api(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     api("cn.hutool:hutool-all")
@@ -27,6 +30,9 @@ dependencies {
     api("com.tngtech.archunit:archunit")
     api("org.mapstruct:mapstruct")
     api("org.mapstruct:mapstruct-processor")
+    annotationProcessor("org.mapstruct:mapstruct-processor")
+    api("javax.annotation:javax.annotation-api")
+    annotationProcessor("javax.annotation:javax.annotation-api")
     api("junit:junit")
     api("org.junit.jupiter:junit-jupiter-api")
     api("org.junit.jupiter:junit-jupiter-engine")
