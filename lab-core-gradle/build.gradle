@@ -1,15 +1,14 @@
 sourceCompatibility = '1.8'
 
 ext {
-    labframeworkVersion = '2021.0.0-SNAPSHOT'
     // import
     springbootVersion = '2.5.6'
     springcloutVersion = '2020.0.4'
 }
 
 dependencies {
-    api(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api(platform(project(":lab-dependencies-gradle")))
+    annotationProcessor(platform(project(":lab-dependencies-gradle")))
     api(platform("org.springframework.boot:spring-boot-starter-parent:$springbootVersion"))
     api(platform("org.springframework.cloud:spring-cloud-dependencies:$springcloutVersion"))
     api(platform("org.springframework.boot:spring-boot-dependencies:$springbootVersion"))
@@ -35,4 +34,8 @@ dependencies {
     api("junit:junit")
     api("org.junit.jupiter:junit-jupiter-api")
     api("org.junit.jupiter:junit-jupiter-engine")
+}
+
+repositories {
+    mavenCentral()
 }

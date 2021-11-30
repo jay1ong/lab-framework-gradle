@@ -1,12 +1,9 @@
 sourceCompatibility = '1.8'
 
-ext {
-    labframeworkVersion = '2021.0.0-SNAPSHOT'
-}
 
 dependencies {
-    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
-    api("com.im:lab-autoconfig-gradle")
-    annotationProcessor("com.im:lab-autoconfig-gradle")
+    implementation(platform(project(":lab-dependencies-gradle")))
+    annotationProcessor(platform(project(":lab-dependencies-gradle")))
+    api(project(":lab-autoconfig-gradle"))
+    annotationProcessor(project(":lab-autoconfig-gradle"))
 }

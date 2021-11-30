@@ -1,11 +1,9 @@
 sourceCompatibility = '1.8'
 
-ext {
-    labframeworkVersion = '2021.0.0-SNAPSHOT'
-}
-
 dependencies {
-    implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    implementation(platform(project(":lab-dependencies-gradle")))
     api("com.sankuai.inf.leaf:leaf-boot-starter")
-    api("org.apache.curator:curator-recipes")
+    api("org.apache.curator:curator-recipes"){
+        exclude group: "org.slf4j", module: "slf4j-log4j12"
+    }
 }
