@@ -1,8 +1,3 @@
-//plugins {
-//    id 'java-platform'
-//    id 'maven-publish'
-//}
-
 javaPlatform {
     allowDependencies()
 }
@@ -53,85 +48,60 @@ dependencies {
         api("com.im:lab-autoconfig-gradle:$labVersion")
         api("com.im:lab-axon-gradle:$labVersion")
         api("com.im:lab-core-gradle:$labVersion")
-        api("com.im:lab-data-gradle:$labVersion")
+//        api("com.im:lab-data-gradle:$labVersion")
         api("com.im:lab-data-jpa-gradle:$labVersion")
         api("com.im:lab-mq-gradle:$labVersion")
         api("com.im:lab-snowflake-gradle:$labVersion")
         api("com.im:lab-web-gradle:$labVersion")
-        // core
+//        // core
         api("cn.hutool:hutool-all:$hutoolVersion")
-        api("org.projectlombok:lombok:${lombokVersion}")
-        api("com.alibaba:fastjson:${fastjsonVersion}")
-        api("org.springframework.boot:spring-boot-starter-parent")
-        api("org.springframework.cloud:spring-cloud-dependencies")
-        api("org.springframework.boot:spring-boot-dependencies")
-        api("org.springframework.boot:spring-boot-starter-freemarker")
-        api("org.springframework.boot:spring-boot-starter-thymeleaf")
-        api("org.springframework.boot:spring-boot-starter-validation:${springbootVersion}")
-        api("org.springframework.boot:spring-boot-starter:${springbootVersion}")
-        api("org.springframework.boot:spring-boot-starter-test:${springbootVersion}")
-        api("org.springframework.boot:spring-boot-autoconfigure:${springbootVersion}")
-        api("org.springframework.boot:spring-boot-configuration-processor:${springbootVersion}")
-        api("org.springframework.cloud:spring-cloud-starter-bootstrap:${springcloudstarterVersion}")
-        api("org.springframework.cloud:spring-cloud-starter:${springcloudstarterVersion}")
+        api("org.projectlombok:lombok:$lombokVersion")
+        api("com.alibaba:fastjson:$fastjsonVersion")
+        api("org.springframework.boot:spring-boot-starter-freemarker:$springbootVersion")
+        api("org.springframework.boot:spring-boot-starter-thymeleaf:$springbootVersion")
+        api("org.springframework.boot:spring-boot-starter-validation:$springbootVersion")
+        api("org.springframework.boot:spring-boot-starter:$springbootVersion")
+        api("org.springframework.boot:spring-boot-starter-test:$springbootVersion")
+        api("org.springframework.boot:spring-boot-autoconfigure:$springbootVersion")
+        api("org.springframework.boot:spring-boot-configuration-processor:$springbootVersion")
+        api("org.springframework.cloud:spring-cloud-starter-bootstrap:$springcloudstarterVersion")
+        api("org.springframework.cloud:spring-cloud-starter:$springcloudstarterVersion")
         api("org.springframework.boot:spring-boot-gradle-plugin:$springbootgradlepluginVersion")
-        api("org.apache.httpcomponents:httpclient:${httpclientVersion}")
-        api("com.tngtech.archunit:archunit:${archunitVersion}")
-        api("org.mapstruct:mapstruct:${mapstructVersion}")
-        api("org.mapstruct:mapstruct-processor:${mapstructVersion}")
+        api("org.apache.httpcomponents:httpclient:$httpclientVersion")
+        api("com.tngtech.archunit:archunit:$archunitVersion")
+        api("org.mapstruct:mapstruct:$mapstructVersion")
+        api("org.mapstruct:mapstruct-processor:$mapstructVersion")
         api("javax.annotation:javax.annotation-api:$javaxannotationapiVersion")
-        api("junit:junit:${junitVersion}")
-        api("org.junit.jupiter:junit-jupiter-api:${junitjupiterVersion}")
-        api("org.junit.jupiter:junit-jupiter-engine:${junitjupiterVersion}")
+        api("junit:junit:$junitVersion")
+        api("org.junit.jupiter:junit-jupiter-api:$junitjupiterVersion")
+        api("org.junit.jupiter:junit-jupiter-engine:$junitjupiterVersion")
         // data-jpa
-        api("com.querydsl:querydsl-apt:${querydslVersion}")
-        api("com.querydsl:querydsl-apt:${querydslVersion}:jpa")
-        api("com.querydsl:querydsl-jpa:${querydslVersion}")
-        api("com.querydsl:querydsl-sql-codegen:${querydslVersion}")
+        api("com.querydsl:querydsl-apt:$querydslVersion")
+        api("com.querydsl:querydsl-apt:$querydslVersion:jpa")
+        api("com.querydsl:querydsl-jpa:$querydslVersion")
+        api("com.querydsl:querydsl-sql-codegen:$querydslVersion")
         api("org.hibernate.javax.persistence:hibernate-jpa-2.1-api:$hibernatejpa21apiVersion")
-        api("com.vladmihalcea:hibernate-types-55:${hibernatetypes55Verison}")
-        api("org.postgresql:postgresql:${postgresqlVersion}")
-        api("org.springframework.boot:spring-boot-starter-data-jpa:${springbootVersion}")
-        api("jakarta.persistence:jakarta.persistence-api:${jakartapersistenceapiVersion}")
-        api("javax.persistence:javax.persistence-api:${javaxpersistenceapiVersion}")
-        api("com.cosium.spring.data:spring-data-jpa-entity-graph:${springdatajpaentitygraphVersion}")
+        api("com.vladmihalcea:hibernate-types-55:$hibernatetypes55Verison")
+        api("org.postgresql:postgresql:$postgresqlVersion")
+        api("org.springframework.boot:spring-boot-starter-data-jpa:$springbootVersion")
+        api("jakarta.persistence:jakarta.persistence-api:$jakartapersistenceapiVersion")
+        api("javax.persistence:javax.persistence-api:$javaxpersistenceapiVersion")
+        api("com.cosium.spring.data:spring-data-jpa-entity-graph:$springdatajpaentitygraphVersion")
         // web
-        api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:${nacoscloudVersion}")
-        api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:${nacoscloudVersion}")
-        api("org.springframework.boot:spring-boot-starter-web:${springbootVersion}")
-        api("io.springfox:springfox-boot-starter:${springfoxVersion}")
-        api("org.springframework.boot:spring-boot-starter-undertow:${springbootVersion}")
-//        api("io.swagger.core.v3:mapstruct:${swaggerV3Version}")
-//        api("io.swagger:swagger-annotations:${swaggerVersion}")
+        api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:$nacoscloudVersion")
+        api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:$nacoscloudVersion")
+        api("org.springframework.boot:spring-boot-starter-web:$springbootVersion")
+        api("io.springfox:springfox-boot-starter:$springfoxVersion")
+        api("org.springframework.boot:spring-boot-starter-undertow:$springbootVersion")
+//        api("io.swagger.core.v3:mapstruct:$swaggerV3Version")
+//        api("io.swagger:swagger-annotations:$swaggerVersion")
         // axon
-        api("org.axonframework:axon-spring-boot-starter:${axonframeworkVersion}")
-        api("org.axonframework:axon-test:${axonframeworkVersion}")
+        api("org.axonframework:axon-spring-boot-starter:$axonframeworkVersion")
+        api("org.axonframework:axon-test:$axonframeworkVersion")
         // mq
-        api("org.springframework.kafka:spring-kafka:${springkafkaVersion}")
+        api("org.springframework.kafka:spring-kafka:$springkafkaVersion")
         // snowflake
-        api("com.sankuai.inf.leaf:leaf-boot-starter:${sankuaiinfleafVersion}")
-        api("org.apache.curator:curator-recipes:${curatorVersion}")
+        api("com.sankuai.inf.leaf:leaf-boot-starter:$sankuaiinfleafVersion")
+        api("org.apache.curator:curator-recipes:$curatorVersion")
     }
 }
-
-//publishing {
-//    publications {
-//        mavenJavaPlatform(MavenPublication) {
-//            groupId project.group
-//            afterEvaluate {
-//                artifactId = project.name
-//                from components.javaPlatform
-//
-//            }
-//        }
-//    }
-//    repositories {
-//        maven {
-//            url "https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/"
-//            credentials {
-//                username 'repo-1636594448870'
-//                password '14d93c3e05003664c54055340e737677d380d30e'
-//            }
-//        }
-//    }
-//}

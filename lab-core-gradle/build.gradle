@@ -1,19 +1,18 @@
-//plugins {
-//    id 'java'
-//}
-
 sourceCompatibility = '1.8'
 
 ext {
     labframeworkVersion = '2021.0.0-SNAPSHOT'
+    // import
+    springbootVersion = '2.5.6'
+    springcloutVersion = '2020.0.4'
 }
 
 dependencies {
-    api(platform("org.springframework.boot:spring-boot-starter-parent"))
-    api(platform("org.springframework.cloud:spring-cloud-dependencies"))
-    api(platform("org.springframework.boot:spring-boot-dependencies"))
     api(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
+    api(platform("org.springframework.boot:spring-boot-starter-parent:$springbootVersion"))
+    api(platform("org.springframework.cloud:spring-cloud-dependencies:$springcloutVersion"))
+    api(platform("org.springframework.boot:spring-boot-dependencies:$springbootVersion"))
     api("cn.hutool:hutool-all")
     api("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")

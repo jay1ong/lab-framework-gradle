@@ -8,7 +8,7 @@ dependencies {
     implementation(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     annotationProcessor(platform("com.im:lab-dependencies-gradle:$labframeworkVersion"))
     api("com.querydsl:querydsl-apt")
-    annotationProcessor("com.querydsl:querydsl-apt")
+    annotationProcessor("com.querydsl:querydsl-apt::jpa")
     api("org.hibernate.javax.persistence:hibernate-jpa-2.1-api")
     annotationProcessor("org.hibernate.javax.persistence:hibernate-jpa-2.1-api")
     api("com.querydsl:querydsl-jpa")
