@@ -5,7 +5,7 @@ plugins {
 
 // configure repositories for all projects
 allprojects {
-    group = 'cn.jaylong'
+    group = group
     version = version
 
     tasks.withType(JavaCompile) {
