@@ -6,7 +6,7 @@ plugins {
 // configure repositories for all projects
 allprojects {
     group = 'cn.jaylong'
-    version = labframeworkVersion
+    version = version
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
