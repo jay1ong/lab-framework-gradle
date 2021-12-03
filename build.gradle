@@ -3,14 +3,10 @@ plugins {
     id 'java'
 }
 
-ext {
-    labframeworkVersion = '2021.0.0-SNAPSHOT'
-}
-
 // configure repositories for all projects
 allprojects {
-    group = 'com.im'
-    version = '2021.0.0-SNAPSHOT'
+    group = 'cn.jaylong'
+    version = labframeworkVersion
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
@@ -19,17 +15,11 @@ allprojects {
 }
 
 subprojects {
-    apply {
-        plugin "maven-publish"
-    }
+    pluginManager.apply('maven-publish')
     if (project.name == "lab-dependencies-gradle") {
-        apply {
-            plugin 'java-platform'
-        }
+        pluginManager.apply('java-platform')
     } else {
-        apply {
-            plugin 'java-library'
-        }
+        pluginManager.apply('java-library')
     }
 
     publishing {
@@ -43,20 +33,12 @@ subprojects {
             }
         }
         repositories {
-//            maven {
-//                url "https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/"
-//                credentials {
-//                    username 'repo-1636594448870'
-//                    password '14d93c3e05003664c54055340e737677d380d30e'
-//                }
-//            }
             maven {
-                url "http://localhost:11081/nexus/repository/lab-snapshot/"
+                url 'https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/'
                 credentials {
-                    username 'lab'
-                    password 'lab'
+                    username = 'repo-1638512833763'
+                    password = 'eb1dcab0d44b9bb25ca2baa25d62c370bd8504e0'
                 }
-                setAllowInsecureProtocol(true)
             }
         }
     }

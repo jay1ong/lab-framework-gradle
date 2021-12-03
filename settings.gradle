@@ -1,19 +1,11 @@
 dependencyResolutionManagement {
     repositories {
-//        maven {
-//            url "https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/"
-//            credentials {
-//                username = "repo-1638155119928"
-//                password = "3f9e90d9e144508c7a50c74aa55b6a8aab960c09"
-//            }
-//        }
         maven {
-            setUrl("http://localhost:11081/nexus/repository/lab/")
+            url 'https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/'
             credentials {
-                username = "lab"
-                password = "lab"
+                username = 'repo-1638512833763'
+                password = 'eb1dcab0d44b9bb25ca2baa25d62c370bd8504e0'
             }
-            setAllowInsecureProtocol(true)
         }
         maven {
             setUrl("https://maven.aliyun.com/repository/public/")
