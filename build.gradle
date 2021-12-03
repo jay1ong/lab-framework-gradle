@@ -34,10 +34,10 @@ subprojects {
         }
         repositories {
             maven {
-                url 'https://serverless-100020665958-maven.pkg.coding.net/repository/lab/repo/'
+                url repoUrl
                 credentials {
-                    username = 'repo-1638512833763'
-                    password = 'eb1dcab0d44b9bb25ca2baa25d62c370bd8504e0'
+                    username = repoUsername
+                    password = repoPassword
                 }
             }
         }
