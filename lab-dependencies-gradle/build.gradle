@@ -5,10 +5,10 @@ javaPlatform {
 ext {
     labVersion = '2021.0.0-SNAPSHOT'
     // import
-    springbootVersion = '2.5.6'
-    springcloutVersion = '2020.0.4'
+    springbootVersion = '2.6.1'
+    springcloutVersion = '2021.0.0'
     // core
-    springcloudstarterVersion = '3.0.4'
+    springcloudstarterVersion = '3.1.0'
     springbootgradlepluginVersion = '2.6.0'
     hutoolVersion = '5.7.16'
     lombokVersion = '1.18.22'
@@ -25,7 +25,7 @@ ext {
     // data-jpa
     querydslVersion = '5.0.0'
     hibernatetypes55Verison = '2.14.0'
-    postgresqlVersion = '42.2.24'
+    postgresqlVersion = '42.3.1'
     jakartapersistenceapiVersion = '2.2.3'
     javaxpersistenceapiVersion = '2.2'
     springdatajpaentitygraphVersion = '2.5.0'
