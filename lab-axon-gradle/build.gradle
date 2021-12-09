@@ -1,7 +1,13 @@
 sourceCompatibility = '1.8'
 
+ext{
+    axonbomVersion = '4.5.7'
+}
+
+
 dependencies {
     implementation(platform(project(":lab-dependencies-gradle")))
+    api(platform("org.axonframework:axon-bom:$axonbomVersion"))
     api("org.axonframework:axon-spring-boot-starter")
     testImplementation("org.axonframework:axon-test")
 }

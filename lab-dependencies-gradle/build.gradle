@@ -33,7 +33,7 @@ ext {
     // web
     nacoscloudVersion = '2021.1'
     springfoxVersion = '3.0.0'
-    axonframeworkVersion = '4.5.4'
+    axonframeworkVersion = '4.5.5'
     // mq
     springkafkaVersion = '2.7.6'
     curatorVersion = '2.6.0'
