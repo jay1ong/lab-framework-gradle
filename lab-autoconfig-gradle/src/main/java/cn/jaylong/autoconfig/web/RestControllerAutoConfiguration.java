@@ -1,10 +1,11 @@
 package cn.jaylong.autoconfig.web;
 
+import cn.jaylong.web.controller.RestControllerAdvice;
 import cn.jaylong.web.controller.RestControllerProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import cn.jaylong.web.controller.RestControllerAdvice;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -27,6 +28,7 @@ public class RestControllerAutoConfiguration {
     private final ObjectMapper objectMapper;
 
     @Bean
+    @ConditionalOnMissingBean
     public RestControllerAdvice restControllerAdvice() {
         return new RestControllerAdvice(properties, objectMapper);
     }
