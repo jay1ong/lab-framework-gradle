@@ -1,6 +1,6 @@
 sourceCompatibility = '1.8'
 
 dependencies {
-    implementation(platform(project(":lab-dependencies-gradle")))
+    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
     api("org.springframework.kafka:spring-kafka")
 }

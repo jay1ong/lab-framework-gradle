@@ -2,14 +2,11 @@ sourceCompatibility = '1.8'
 
 
 dependencies {
-    implementation(platform(project(":lab-dependencies-gradle")))
-    annotationProcessor(platform(project(":lab-dependencies-gradle")))
-    implementation(project(":lab-autoconfig-gradle")) {
+    implementation(platform("cn.jaylong:lab-dependencies-gradle"))
+    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle"))
+    implementation("cn.jaylong:lab-autoconfig-gradle:$version") {
         exclude(group: "com.alibaba.cloud", module: "spring-cloud-starter-alibaba-nacos-discovery")
         exclude(group: "com.alibaba.cloud", module: "spring-cloud-starter-alibaba-nacos-config")
-        exclude(group: "org.apache.curator", module: "curator-framework")
-        exclude(group: "org.apache.curator", module: "curator-recipes")
     }
-    annotationProcessor(project(":lab-autoconfig-gradle"))
-    implementation(project(":lab-snowflake-gradle"))
+    annotationProcessor("cn.jaylong:lab-autoconfig-gradle:$version")
 }

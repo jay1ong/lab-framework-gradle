@@ -1,9 +1,3 @@
-sourceCompatibility = '1.8'
-
 dependencies {
-    implementation(platform(project(":lab-dependencies-gradle")))
-    api("com.sankuai.inf.leaf:leaf-boot-starter")
-    api("org.apache.curator:curator-recipes"){
-        exclude group: "org.slf4j", module: "slf4j-log4j12"
-    }
+    api("cn.jaylong:lab-core-gradle:$version")
 }

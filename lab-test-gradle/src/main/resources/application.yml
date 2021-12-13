@@ -1,0 +1,16 @@
+server:
+  port: 11006
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  main:
+    allow-bean-definition-overriding: true
+lab:
+  web:
+    advice:
+      exclude-packages: ["springfox.**","aaa"]
+axon:
+  axonserver:
+    enabled: false
+

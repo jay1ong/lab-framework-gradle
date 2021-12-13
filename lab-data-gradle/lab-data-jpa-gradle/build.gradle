@@ -1,8 +1,8 @@
 sourceCompatibility = '1.8'
 
 dependencies {
-    implementation(platform(project(":lab-dependencies-gradle")))
-    annotationProcessor(platform(project(":lab-dependencies-gradle")))
+    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    annotationProcessor(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
     api("com.querydsl:querydsl-apt")
     annotationProcessor("com.querydsl:querydsl-apt::jpa")
     api("org.hibernate.javax.persistence:hibernate-jpa-2.1-api")

@@ -3,7 +3,6 @@ javaPlatform {
 }
 
 ext {
-    labVersion = '2021.0.0-SNAPSHOT'
     // import
     springbootVersion = '2.6.1'
     springcloutVersion = '2021.0.0'
@@ -42,13 +41,13 @@ ext {
 
 dependencies {
     constraints {
-        api("cn.jaylong:lab-autoconfig-gradle:$labVersion")
-        api("cn.jaylong:lab-axon-gradle:$labVersion")
-        api("cn.jaylong:lab-core-gradle:$labVersion")
-        api("cn.jaylong:lab-data-jpa-gradle:$labVersion")
-        api("cn.jaylong:lab-mq-gradle:$labVersion")
-        api("cn.jaylong:lab-snowflake-gradle:$labVersion")
-        api("cn.jaylong:lab-web-gradle:$labVersion")
+        api("cn.jaylong:lab-autoconfig-gradle:$version")
+        api("cn.jaylong:lab-axon-gradle:$version")
+        api("cn.jaylong:lab-core-gradle:$version")
+        api("cn.jaylong:lab-data-jpa-gradle:$version")
+        api("cn.jaylong:lab-mq-gradle:$version")
+        api("cn.jaylong:lab-snowflake-gradle:$version")
+        api("cn.jaylong:lab-web-gradle:$version")
 //        // core
         api("cn.hutool:hutool-all:$hutoolVersion")
         api("org.projectlombok:lombok:$lombokVersion")

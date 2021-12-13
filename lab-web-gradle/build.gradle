@@ -5,10 +5,10 @@ ext {
 }
 
 dependencies {
-    implementation(platform(project(":lab-dependencies-gradle")))
-    annotationProcessor(platform(project(":lab-dependencies-gradle")))
-    api(project(":lab-core-gradle"))
-    annotationProcessor(project(":lab-core-gradle"))
+    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    annotationProcessor(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    api("cn.jaylong:lab-core-gradle:$version")
+    annotationProcessor("cn.jaylong:lab-core-gradle:$version")
     api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
     api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
     api("org.springframework.boot:spring-boot-starter-web") {

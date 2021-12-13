@@ -5,7 +5,6 @@ import cn.jaylong.core.enums.StrategyException;
 import cn.jaylong.core.exception.BizException;
 import lombok.SneakyThrows;
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -19,7 +18,6 @@ import java.util.stream.Collectors;
  * Author: I'm
  * Date: 2021/11/12
  */
-@Service
 public class StrategyService {
 
     private final Map<String, Object> map;

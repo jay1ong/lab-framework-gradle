@@ -1,10 +1,11 @@
-package cn.jaylong.autoconfig.core;
+package cn.jaylong.autoconfig.snowflake;
 
-import cn.jaylong.core.strategy.StrategyService;
+import cn.jaylong.snowflake.SnowFlakeProperties;
+import cn.jaylong.snowflake.Snowflake;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.context.ApplicationContext;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,16 +16,17 @@ import org.springframework.context.annotation.Configuration;
  * Url: jaylong.cn
  */
 @Configuration
-@ConditionalOnClass(StrategyService.class)
+@EnableConfigurationProperties(SnowFlakeProperties.class)
+@ConditionalOnClass({Snowflake.class})
 @AllArgsConstructor
-public class StrategyAutoConfiguration {
+public class SnowflakeAutoConfiguration {
 
-    private final ApplicationContext context;
+    private final SnowFlakeProperties properties;
 
     @Bean
     @ConditionalOnMissingBean
-    public StrategyService service() {
-        return new StrategyService(context);
+    public Snowflake snowflake() {
+        return new Snowflake(properties);
     }
 
 }

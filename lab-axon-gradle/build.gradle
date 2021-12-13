@@ -6,8 +6,10 @@ ext{
 
 
 dependencies {
-    implementation(platform(project(":lab-dependencies-gradle")))
+    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    api("cn.jaylong:lab-core-gradle:$version")
+    annotationProcessor("cn.jaylong:lab-core-gradle:$version")
+    api("cn.jaylong:lab-snowflake-gradle:$version")
     api(platform("org.axonframework:axon-bom:$axonbomVersion"))
     api("org.axonframework:axon-spring-boot-starter")
-    testImplementation("org.axonframework:axon-test")
 }

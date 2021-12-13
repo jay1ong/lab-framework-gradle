@@ -1,12 +1,11 @@
 package cn.jaylong.test.controller;
 
-import cn.hutool.core.convert.Convert;
 import cn.jaylong.core.validate.ValidationUtil;
+import cn.jaylong.snowflake.Snowflake;
 import cn.jaylong.test.model.UserValidatorModel;
-import cn.jaylong.web.OriginResponse;
-import com.sankuai.inf.leaf.service.SnowflakeService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.axonframework.common.IdentifierFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,12 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2021/11/16
  */
 @RestController
-@OriginResponse
 @Slf4j
 @AllArgsConstructor
 public class TestController {
 
-    private final SnowflakeService snowflakeService;
+    private final Snowflake snowflake;
 
     @GetMapping("test")
     public String test() {
@@ -45,9 +43,15 @@ public class TestController {
         return true;
     }
 
-    @GetMapping("/leaf/id")
+    @GetMapping("/snowflake/id")
     public String leafId() {
-        return Convert.toStr(snowflakeService.getId("id").getId());
+        return snowflake.nextIdStr();
+    }
+
+    @GetMapping("/axon/id")
+    public String axonId() {
+        return IdentifierFactory.getInstance().generateIdentifier();
+//        return snowflakeIdentifierFactory.generateIdentifier();
     }
 
 }
