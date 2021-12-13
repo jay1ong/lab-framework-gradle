@@ -76,6 +76,9 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
         if (body instanceof ApiMessage) {
             return body;
         }
+        if (body == null){
+            return null;
+        }
         ApiMessage message = new ApiMessage();
         message.setCode("200");
         message.setTimestamp(LocalDateTime.now());

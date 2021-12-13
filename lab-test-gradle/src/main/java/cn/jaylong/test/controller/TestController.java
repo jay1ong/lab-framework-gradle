@@ -51,7 +51,15 @@ public class TestController {
     @GetMapping("/axon/id")
     public String axonId() {
         return IdentifierFactory.getInstance().generateIdentifier();
-//        return snowflakeIdentifierFactory.generateIdentifier();
+    }
+
+    @GetMapping("/void")
+    public void voidMethod() {
+    }
+
+    @GetMapping("/void/string")
+    public String voidStringMethod() {
+        return "";
     }
 
 }
