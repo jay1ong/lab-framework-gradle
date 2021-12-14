@@ -34,11 +34,12 @@ subprojects {
         }
         repositories {
             maven {
-                url repoUrl
+                url repoPushUrl
                 credentials {
                     username = repoUsername
                     password = repoPassword
                 }
+                allowInsecureProtocol(true)
             }
         }
     }

@@ -1,11 +1,12 @@
 dependencyResolutionManagement {
     repositories {
         maven {
-            url repoUrl
+            url repoPushUrl
             credentials {
                 username = repoUsername
                 password = repoPassword
             }
+            allowInsecureProtocol(true)
         }
         maven {
             setUrl("https://maven.aliyun.com/repository/public/")
