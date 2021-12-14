@@ -1,4 +1,4 @@
-package cn.jaylong.web.controller;
+package cn.jaylong.test.controller;
 
 import cn.jaylong.core.exception.BizException;
 import cn.jaylong.core.net.ApiMessage;
@@ -65,6 +65,7 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
         BindingResult result = ex.getBindingResult();
         List<FieldError> fieldErrors = result.getFieldErrors();
         StringBuilder stringBuilder = new StringBuilder();
+
         fieldErrors.forEach(it -> {
             stringBuilder
                     .append(it.getField())
@@ -100,11 +101,11 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
         if (body instanceof ApiMessage) {
             return body;
         }
-        if (body == null){
+        if (body == null) {
             return null;
         }
         ApiMessage message = new ApiMessage();
-        message.setCode("200");
+        message.setCode("20000");
         message.setTimestamp(LocalDateTime.now());
         message.setData(body);
         response.getHeaders().set("Content-Type", "application/json;charset=utf-8");

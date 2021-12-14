@@ -10,6 +10,10 @@ lab:
   web:
     advice:
       exclude-packages: ["springfox.**","aaa"]
+      enabled: false
+  test:
+    advice:
+      exclude-packages: ["springfox.**"]
 axon:
   axonserver:
     enabled: false

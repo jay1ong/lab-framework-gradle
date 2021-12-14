@@ -1,7 +1,9 @@
 package cn.jaylong.test.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotBlank;
@@ -13,6 +15,8 @@ import javax.validation.constraints.NotBlank;
  */
 @Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserValidatorModel {
 
     @NotBlank

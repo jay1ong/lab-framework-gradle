@@ -6,9 +6,11 @@ import cn.jaylong.test.model.UserValidatorModel;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.common.IdentifierFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.Errors;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -60,6 +62,10 @@ public class TestController {
     @GetMapping("/void/string")
     public String voidStringMethod() {
         return "";
+    }
+
+    @PostMapping("/rest/controller/advice/400")
+    public void restControllerAdvice400(@Validated @RequestBody UserValidatorModel model) {
     }
 
 }
