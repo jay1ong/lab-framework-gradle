@@ -16,5 +16,6 @@ dependencies {
     }
     api("io.springfox:springfox-boot-starter")
     api("org.springframework.boot:spring-boot-starter-undertow")
+    implementation("org.axonframework:axon-modelling")
 }
 

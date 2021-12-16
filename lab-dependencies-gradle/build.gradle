@@ -91,6 +91,7 @@ dependencies {
 //        api("io.swagger.core.v3:mapstruct:$swaggerV3Version")
 //        api("io.swagger:swagger-annotations:$swaggerVersion")
         // axon
+        api("org.axonframework:axon-modelling:$axonframeworkVersion")
         api("org.axonframework:axon-spring-boot-starter:$axonframeworkVersion")
         api("org.axonframework:axon-test:$axonframeworkVersion")
         // mq

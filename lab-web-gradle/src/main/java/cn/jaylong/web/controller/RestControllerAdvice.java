@@ -6,6 +6,7 @@ import cn.jaylong.web.OriginResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
+import org.axonframework.modelling.command.AggregateNotFoundException;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -67,8 +68,9 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
         StringBuilder stringBuilder = new StringBuilder();
         fieldErrors.forEach(it -> {
             stringBuilder
+                    .append("(")
                     .append(it.getField())
-                    .append(":")
+                    .append(")")
                     .append(it.getDefaultMessage())
                     .append(";");
         });
@@ -76,6 +78,16 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
         message.setCode("11001");
         message.setTimestamp(LocalDateTime.now());
         message.setMessage(stringBuilder.toString());
+        message.setDescription(request.getDescription(false));
+        return ResponseEntity.ok(message);
+    }
+
+    @ExceptionHandler(AggregateNotFoundException.class)
+    public ResponseEntity<?> aggregateNotFoundException(AggregateNotFoundException ex, WebRequest request) {
+        ApiMessage message = new ApiMessage();
+        message.setCode("11002");
+        message.setTimestamp(LocalDateTime.now());
+        message.setMessage("指定的聚合不存在:" + ex.getMessage());
         message.setDescription(request.getDescription(false));
         return ResponseEntity.ok(message);
     }
