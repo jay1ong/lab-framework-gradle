@@ -31,6 +31,7 @@ ext {
     hibernatejpa21apiVersion = '1.0.2.Final'
     // web
     nacoscloudVersion = '2021.1'
+    nacosclientVersion = '2.0.3'
     springfoxVersion = '3.0.0'
     axonframeworkVersion = '4.5.5'
     // mq
@@ -84,6 +85,7 @@ dependencies {
         api("com.cosium.spring.data:spring-data-jpa-entity-graph:$springdatajpaentitygraphVersion")
         // web
         api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:$nacoscloudVersion")
+        api("com.alibaba.nacos:nacos-client:$nacosclientVersion")
         api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:$nacoscloudVersion")
         api("org.springframework.boot:spring-boot-starter-web:$springbootVersion")
         api("io.springfox:springfox-boot-starter:$springfoxVersion")

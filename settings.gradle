@@ -1,7 +1,7 @@
 dependencyResolutionManagement {
     repositories {
         maven {
-            url repoPushUrl
+            url repoUrl
             credentials {
                 username = repoUsername
                 password = repoPassword

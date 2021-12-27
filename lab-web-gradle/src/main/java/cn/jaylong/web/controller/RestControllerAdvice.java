@@ -112,13 +112,10 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
         if (body instanceof ApiMessage) {
             return body;
         }
-        if (body == null){
-            return null;
-        }
         ApiMessage message = new ApiMessage();
         message.setCode("200");
         message.setTimestamp(LocalDateTime.now());
-        message.setData(body);
+        message.setData(body == null ? "成功" : body);
         response.getHeaders().set("Content-Type", "application/json;charset=utf-8");
         return body instanceof String ? objectMapper.writeValueAsString(message) : message;
     }

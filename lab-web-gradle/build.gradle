@@ -9,7 +9,10 @@ dependencies {
     annotationProcessor(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
     api("cn.jaylong:lab-core-gradle:$version")
     annotationProcessor("cn.jaylong:lab-core-gradle:$version")
-    api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"){
+        exclude group: 'com.alibaba.nacos', module: 'nacos-client'
+    }
+    api("com.alibaba.nacos:nacos-client:2.0.3")
     api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
     api("org.springframework.boot:spring-boot-starter-web") {
         exclude group: "org.springframework.boot", module: "spring-boot-starter-tomcat"
