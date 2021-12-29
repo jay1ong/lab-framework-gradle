@@ -9,5 +9,4 @@ dependencies {
         exclude(group: "com.alibaba.cloud", module: "spring-cloud-starter-alibaba-nacos-config")
     }
     annotationProcessor("cn.jaylong:lab-autoconfig-gradle:$version")
-    implementation("cn.jaylong:lab-axon-gradle:$version")
 }

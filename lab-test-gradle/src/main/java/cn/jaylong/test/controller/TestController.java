@@ -5,7 +5,6 @@ import cn.jaylong.snowflake.Snowflake;
 import cn.jaylong.test.model.UserValidatorModel;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.axonframework.common.IdentifierFactory;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,10 +46,10 @@ public class TestController {
         return snowflake.nextIdStr();
     }
 
-    @GetMapping("/axon/id")
-    public String axonId() {
-        return IdentifierFactory.getInstance().generateIdentifier();
-    }
+//    @GetMapping("/axon/id")
+//    public String axonId() {
+//        return IdentifierFactory.getInstance().generateIdentifier();
+//    }
 
     @GetMapping("/void")
     public void voidMethod() {

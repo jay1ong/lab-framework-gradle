@@ -1,6 +1,7 @@
 package cn.jaylong.autoconfig.web;
 
 import lombok.AllArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SpringFoxAutoConfiguration {
 
     @Bean
+    @ConditionalOnMissingBean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
