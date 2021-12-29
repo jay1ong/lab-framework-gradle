@@ -98,6 +98,8 @@ dependencies {
         api("org.axonframework:axon-test:$axonframeworkVersion")
         // mq
         api("org.springframework.kafka:spring-kafka:$springkafkaVersion")
+        // security
+        api("org.springframework.boot:spring-boot-starter-security:$springbootVersion")
         // snowflake
         api("com.sankuai.inf.leaf:leaf-boot-starter:$sankuaiinfleafVersion")
         api("org.apache.curator:curator-recipes:$curatorVersion")

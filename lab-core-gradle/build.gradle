@@ -7,11 +7,11 @@ ext {
 }
 
 dependencies {
-    api(platform(project(":lab-dependencies-gradle")))
-    annotationProcessor(platform(project(":lab-dependencies-gradle")))
-    api(platform("org.springframework.boot:spring-boot-starter-parent:$springbootVersion"))
-    api(platform("org.springframework.cloud:spring-cloud-dependencies:$springcloutVersion"))
-    api(platform("org.springframework.boot:spring-boot-dependencies:$springbootVersion"))
+    implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    implementation(platform("org.springframework.boot:spring-boot-starter-parent:$springbootVersion"))
+    implementation(platform("org.springframework.cloud:spring-cloud-dependencies:$springcloutVersion"))
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:$springbootVersion"))
     api("cn.hutool:hutool-all")
     api("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
@@ -34,8 +34,4 @@ dependencies {
     api("junit:junit")
     api("org.junit.jupiter:junit-jupiter-api")
     api("org.junit.jupiter:junit-jupiter-engine")
-}
-
-repositories {
-    mavenCentral()
 }

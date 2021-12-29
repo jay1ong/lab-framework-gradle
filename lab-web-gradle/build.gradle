@@ -5,8 +5,8 @@ ext {
 }
 
 dependencies {
-    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
-    annotationProcessor(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle:$version"))
     api("cn.jaylong:lab-core-gradle:$version")
     annotationProcessor("cn.jaylong:lab-core-gradle:$version")
     api("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery"){

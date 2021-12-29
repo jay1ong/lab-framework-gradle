@@ -2,8 +2,8 @@ sourceCompatibility = '1.8'
 
 
 dependencies {
-    implementation(platform("cn.jaylong:lab-dependencies-gradle"))
-    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle"))
+    implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle:$version"))
     implementation("cn.jaylong:lab-autoconfig-gradle:$version") {
         exclude(group: "com.alibaba.cloud", module: "spring-cloud-starter-alibaba-nacos-discovery")
         exclude(group: "com.alibaba.cloud", module: "spring-cloud-starter-alibaba-nacos-config")

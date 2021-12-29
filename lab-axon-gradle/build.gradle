@@ -6,7 +6,7 @@ ext{
 
 
 dependencies {
-    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
     api("cn.jaylong:lab-core-gradle:$version")
     annotationProcessor("cn.jaylong:lab-core-gradle:$version")
     api("cn.jaylong:lab-snowflake-gradle:$version")

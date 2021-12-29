@@ -1,8 +1,8 @@
 sourceCompatibility = '1.8'
 
 dependencies {
-    implementation(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
-    annotationProcessor(platform(("cn.jaylong:lab-dependencies-gradle:$version")))
+    implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle:$version"))
     api("cn.jaylong:lab-axon-gradle:$version")
     api("cn.jaylong:lab-web-gradle:$version")
     annotationProcessor("cn.jaylong:lab-web-gradle:$version")

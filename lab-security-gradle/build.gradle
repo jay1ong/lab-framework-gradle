@@ -1,0 +1,5 @@
+dependencies {
+    implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    annotationProcessor(platform("cn.jaylong:lab-dependencies-gradle:$version"))
+    api("org.springframework.boot:spring-boot-starter-security")
+}
