@@ -99,8 +99,8 @@ dependencies {
         // mq
         api("org.springframework.kafka:spring-kafka:$springkafkaVersion")
         // security
+        api("org.springframework.boot:spring-boot-starter-security:$springbootVersion")
         api("org.springframework.security:spring-security-oauth2-resource-server:$springsecurityoauth2resourceserverVersion")
         api("org.springframework.security:spring-security-oauth2-jose:$springsecurityoauth2joseVersion")
-        api("org.springframework.boot:spring-boot-starter-security:$springbootVersion")
     }
 }
