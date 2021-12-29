@@ -4,7 +4,6 @@ ext{
     axonbomVersion = '4.5.7'
 }
 
-
 dependencies {
     implementation(platform("cn.jaylong:lab-dependencies-gradle:$version"))
     api("cn.jaylong:lab-core-gradle:$version")

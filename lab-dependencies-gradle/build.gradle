@@ -36,8 +36,9 @@ ext {
     axonframeworkVersion = '4.5.5'
     // mq
     springkafkaVersion = '2.7.6'
-    curatorVersion = '2.6.0'
-    sankuaiinfleafVersion = '1.0.1-RELEASE'
+    // security
+    springsecurityoauth2resourceserverVersion = '5.6.1'
+    springsecurityoauth2joseVersion = '5.6.1'
 }
 
 dependencies {
@@ -91,8 +92,6 @@ dependencies {
         api("org.springframework.boot:spring-boot-starter-web:$springbootVersion")
         api("io.springfox:springfox-boot-starter:$springfoxVersion")
         api("org.springframework.boot:spring-boot-starter-undertow:$springbootVersion")
-//        api("io.swagger.core.v3:mapstruct:$swaggerV3Version")
-//        api("io.swagger:swagger-annotations:$swaggerVersion")
         // axon
         api("org.axonframework:axon-modelling:$axonframeworkVersion")
         api("org.axonframework:axon-spring-boot-starter:$axonframeworkVersion")
@@ -100,9 +99,8 @@ dependencies {
         // mq
         api("org.springframework.kafka:spring-kafka:$springkafkaVersion")
         // security
+        api("org.springframework.security:spring-security-oauth2-resource-server:$springsecurityoauth2resourceserverVersion")
+        api("org.springframework.security:spring-security-oauth2-jose:$springsecurityoauth2joseVersion")
         api("org.springframework.boot:spring-boot-starter-security:$springbootVersion")
-        // snowflake
-        api("com.sankuai.inf.leaf:leaf-boot-starter:$sankuaiinfleafVersion")
-        api("org.apache.curator:curator-recipes:$curatorVersion")
     }
 }
