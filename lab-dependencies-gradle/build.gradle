@@ -47,6 +47,7 @@ dependencies {
         api("cn.jaylong:lab-core-gradle:$version")
         api("cn.jaylong:lab-data-jpa-gradle:$version")
         api("cn.jaylong:lab-mq-gradle:$version")
+        api("cn.jaylong:lab-security-gradle:$version")
         api("cn.jaylong:lab-snowflake-gradle:$version")
         api("cn.jaylong:lab-web-gradle:$version")
 //        // core
