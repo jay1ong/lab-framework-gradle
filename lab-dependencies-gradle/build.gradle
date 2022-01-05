@@ -39,6 +39,7 @@ ext {
     // security
     springsecurityoauth2resourceserverVersion = '5.6.1'
     springsecurityoauth2joseVersion = '5.6.1'
+    javaxservletapiVersion = '4.0.1'
 }
 
 dependencies {
@@ -102,5 +103,6 @@ dependencies {
         api("org.springframework.boot:spring-boot-starter-security:$springbootVersion")
         api("org.springframework.security:spring-security-oauth2-resource-server:$springsecurityoauth2resourceserverVersion")
         api("org.springframework.security:spring-security-oauth2-jose:$springsecurityoauth2joseVersion")
+        api("javax.servlet:javax.servlet-api:$javaxservletapiVersion")
     }
 }

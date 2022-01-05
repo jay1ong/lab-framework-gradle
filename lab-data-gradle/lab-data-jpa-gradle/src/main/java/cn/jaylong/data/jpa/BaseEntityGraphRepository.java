@@ -1,6 +1,7 @@
 package cn.jaylong.data.jpa;
 
 import com.cosium.spring.data.jpa.entity.graph.repository.EntityGraphJpaRepository;
+import com.cosium.spring.data.jpa.entity.graph.repository.EntityGraphJpaSpecificationExecutor;
 import com.cosium.spring.data.jpa.entity.graph.repository.EntityGraphQuerydslPredicateExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
 
@@ -13,5 +14,5 @@ import java.io.Serializable;
  */
 @NoRepositoryBean
 public interface BaseEntityGraphRepository<T, ID extends Serializable> extends
-        EntityGraphJpaRepository<T, ID>, EntityGraphQuerydslPredicateExecutor<T> {
+        EntityGraphJpaRepository<T, ID>, EntityGraphQuerydslPredicateExecutor<T>, EntityGraphJpaSpecificationExecutor<T> {
 }
