@@ -5,9 +5,12 @@ import cn.jaylong.core.net.ApiMessage;
 import cn.jaylong.web.OriginResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
+import lombok.NonNull;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.axonframework.modelling.command.AggregateNotFoundException;
 import org.springframework.core.MethodParameter;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -18,6 +21,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
@@ -33,6 +37,7 @@ import java.util.Set;
  */
 @org.springframework.web.bind.annotation.RestControllerAdvice
 @AllArgsConstructor
+@Slf4j
 public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
 
     private final RestControllerProperties properties;
@@ -42,7 +47,10 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
     private final AntPathMatcher matcher = new AntPathMatcher();
 
     @ExceptionHandler(BizException.class)
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<?> bizException(BizException ex, WebRequest request) {
+        log.error(ex.getMessage());
+        ex.printStackTrace();
         ApiMessage message = new ApiMessage();
         message.setCode(ex.getCode());
         message.setTimestamp(LocalDateTime.now());
@@ -52,7 +60,10 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
     }
 
     @ExceptionHandler(Exception.class)
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<?> globalExceptionHandler(Exception ex, WebRequest request) {
+        log.error(ex.getMessage());
+        ex.printStackTrace();
         ApiMessage message = new ApiMessage();
         message.setCode("11000");
         message.setTimestamp(LocalDateTime.now());
@@ -63,17 +74,17 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException ex, WebRequest request) {
+        log.error(ex.getMessage());
+        ex.printStackTrace();
         BindingResult result = ex.getBindingResult();
         List<FieldError> fieldErrors = result.getFieldErrors();
         StringBuilder stringBuilder = new StringBuilder();
-        fieldErrors.forEach(it -> {
-            stringBuilder
-                    .append("(")
-                    .append(it.getField())
-                    .append(")")
-                    .append(it.getDefaultMessage())
-                    .append(";");
-        });
+        fieldErrors.forEach(it -> stringBuilder
+                .append("(")
+                .append(it.getField())
+                .append(")")
+                .append(it.getDefaultMessage())
+                .append(";"));
         ApiMessage message = new ApiMessage();
         message.setCode("11001");
         message.setTimestamp(LocalDateTime.now());
@@ -84,6 +95,8 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
 
     @ExceptionHandler(AggregateNotFoundException.class)
     public ResponseEntity<?> aggregateNotFoundException(AggregateNotFoundException ex, WebRequest request) {
+        log.error(ex.getMessage());
+        ex.printStackTrace();
         ApiMessage message = new ApiMessage();
         message.setCode("11002");
         message.setTimestamp(LocalDateTime.now());
@@ -93,19 +106,19 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
     }
 
     @Override
-    public boolean supports(MethodParameter returnType,
-                            Class<? extends HttpMessageConverter<?>> converterType) {
+    public boolean supports(@NonNull MethodParameter returnType,
+                            @NonNull Class<? extends HttpMessageConverter<?>> converterType) {
         return filter(returnType);
     }
 
     @SneakyThrows
     @Override
     public Object beforeBodyWrite(Object body,
-                                  MethodParameter returnType,
-                                  MediaType selectedContentType,
-                                  Class<? extends HttpMessageConverter<?>> selectedConverterType,
-                                  ServerHttpRequest request,
-                                  ServerHttpResponse response) {
+                                  @NonNull MethodParameter returnType,
+                                  @NonNull MediaType selectedContentType,
+                                  @NonNull Class<? extends HttpMessageConverter<?>> selectedConverterType,
+                                  @NonNull ServerHttpRequest request,
+                                  @NonNull ServerHttpResponse response) {
         if (properties.getExcludePaths().stream().anyMatch(it -> matcher.match(it, request.getURI().getPath()))) {
             return body;
         }
